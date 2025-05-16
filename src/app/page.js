@@ -1,6 +1,13 @@
+import getOpenAiData from "@/services/openAI/client";
 import { css } from "../../styled-system/css";
 
-export default function Home() {
+const Home = async () => {
+  const data = await getOpenAiData({
+    instructions: "Generate a simple response",
+    input: "Hello",
+  });
+
+  console.log("Data", data);
   return (
     <div
       className={css({
@@ -9,6 +16,9 @@ export default function Home() {
       })}
     >
       Hello wurrold
+      <button>Get OpenAI Data</button>
     </div>
   );
-}
+};
+
+export default Home;
