@@ -7,11 +7,13 @@ const openAiClient = new OpenAI({
 });
 
 const getOpenAiData = async ({ instructions, input }) => {
-  const response = await openAiClient.responses.create({
-    model: "gpt-4o",
-    instructions,
-    input,
-  });
+  const response = "hello wurrold";
+  // const response = await openAiClient.responses.create({
+  //   model: "gpt-4o",
+  //   instructions,
+  //   input,
+  // });
+
   return response;
 };
 
